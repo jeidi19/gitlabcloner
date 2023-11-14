@@ -1,0 +1,17 @@
+services:
+  script:
+    build: .
+    env_file:
+      - .env
+    environment:
+      SOURCE_TOKEN: /run/secrets/source_token
+      DESTINATION_TOKEN: /run/secrets/destination_token
+    secrets:
+      - destination_token
+      - source_token
+    command: ${PROJECT_PATH}
+secrets:
+  source_token:
+    file: .source_token
+  destination_token:
+    file: .destination_token

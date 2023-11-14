@@ -1,0 +1,5 @@
+.env
+venv/
+compose.yaml
+.source_token
+.destination_token
